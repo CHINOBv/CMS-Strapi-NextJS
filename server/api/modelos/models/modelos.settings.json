@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "modelos",
+  "info": {
+    "name": "Modelos"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Modelo": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "producto": {
+      "via": "modelo",
+      "model": "productos"
+    }
+  }
+}

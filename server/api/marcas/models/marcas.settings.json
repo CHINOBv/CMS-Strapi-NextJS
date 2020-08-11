@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "marcas",
+  "info": {
+    "name": "Marcas"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Marca": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "producto": {
+      "via": "marca",
+      "model": "productos"
+    }
+  }
+}

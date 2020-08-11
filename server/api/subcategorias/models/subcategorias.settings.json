@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "subcategorias",
+  "info": {
+    "name": "Subcategorias"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Subcategoria": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "producto": {
+      "via": "subcategorias",
+      "model": "productos"
+    },
+    "categoria": {
+      "via": "subcategorias",
+      "model": "categorias"
+    }
+  }
+}

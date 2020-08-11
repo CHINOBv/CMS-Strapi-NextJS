@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "estados",
+  "info": {
+    "name": "Estado"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "producto": {
+      "model": "productos",
+      "via": "estado"
+    },
+    "Estado": {
+      "type": "enumeration",
+      "enum": [
+        "Nuevo",
+        "Usado"
+      ],
+      "required": true
+    }
+  }
+}
